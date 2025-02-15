@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- <nav class="floating-nav">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+    </nav> -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-invitation">We invite you to honor us with your presence at our wedding</div>
+            <h1 class="names">Jovanka & Mladen</h1>
+            <div class="date">May 31st, 2025</div>
+        </div>
+        <div id="countdown" class="countdown">
+            <div class="countdown-subtitle">Time until celebration</div>
+            <div class="countdown-items-container">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <span class="label">days</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="sati">00</span>
+                    <span class="label">hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minuta">00</span>
+                    <span class="label">minutes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="story">
+        <div class="photo-container">
+            <img src="imgs/main-photo.jpg" alt="Jovanka i Mladen" class="main-photo">
+        </div>
+    </section>
+
+    <section id="agenda" class="agenda">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="time">2:15 PM</div>
+                <div class="event">
+                    <h3>Church Ceremony</h3>
+                    <p>Crkva Svetog kneza Lazara - Lazarica</p>
+                    <a href="https://maps.app.goo.gl/VurdKB6iAcZBeYMR9" class="map-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Show location</span>
+                    </a>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">4:00 PM</div>
+                <div class="event">
+                    <h3>Wedding Party Gathering</h3>
+                    <p>Verde Restaurant</p>
+                    <a href="https://maps.app.goo.gl/UrckixEwC94FHtSGA" class="map-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Show location</span>
+                    </a>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">5:30 PM</div>
+                <div class="event">
+                    <h3>Civil Ceremony</h3>
+                    <p>Verde Restaurant</p>
+                    <a href="https://maps.app.goo.gl/UrckixEwC94FHtSGA" class="map-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Show location</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+        <form id="rsvp-form" class="rsvp-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Your email (to send you photos)">
+            </div>
+            <div class="form-group">
+                <select id="attending" name="attending" required>
+                    <option value="">Will you attend?</option>
+                    <option value="yes">Yes, I'll be there</option>
+                    <option value="no">Unfortunately, I can't make it</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="number" id="guests" name="guests" min="0" max="6" placeholder="Number of guests">
+            </div>
+            <button type="submit" class="submit-btn">Send Response</button>
+            <div class="deadline-note">
+                <p>Please respond by May 1st</p>
+            </div>
+        </form>
+    </section>
+
+    <section id="calendar-buttons" class="calendar-section">
+        <h2>Save the Date</h2>
+        <div class="button-container">
+            <button id="google-calendar" class="calendar-btn">
+                <i class="fab fa-google"></i>
+                <span>Google Calendar</span>
+            </button>
+            <button id="apple-calendar" class="calendar-btn">
+                <i class="fab fa-apple"></i>
+                <span>iPhone Calendar</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="imgs/img1.jpg" alt="Verde1">
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/img2.jpg" alt="Verde2">
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/img3.jpg" alt="Verde3">
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/img4.jpg" alt="Verde4">
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/emailjs.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>
